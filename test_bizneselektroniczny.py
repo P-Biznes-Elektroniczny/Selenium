@@ -1,5 +1,6 @@
 import pytest
 import random
+import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -68,10 +69,14 @@ class TestTest():
     self.driver.find_element(By.CSS_SELECTOR, ".touchspin-up").click()
     # 36 | click | css=.add-to-cart | 
     self.driver.find_element(By.CSS_SELECTOR, ".add-to-cart").click()
-    # 38 | click | css=.header .hidden-sm-down | 
+    # 38 | click | css=.header .hidden-sm-down |
     self.driver.find_element(By.CSS_SELECTOR, ".header .hidden-sm-down").click()
+
+    time.sleep(1)
     # 39 | click | css=.cart-item:nth-child(1) .col-md-2 .material-icons | 
     self.driver.find_element(By.CSS_SELECTOR, ".cart-item:nth-child(1) .col-md-2 .material-icons").click()
+
+    time.sleep(1)
     # 40 | click | css=.logo | 
     self.driver.find_element(By.CSS_SELECTOR, ".logo").click()
     # 41 | click | css=.user-info .hidden-sm-down | 
@@ -92,6 +97,8 @@ class TestTest():
     self.driver.find_element(By.NAME, "password").click()
     # 49 | type | name=password | 12345
     self.driver.find_element(By.NAME, "password").send_keys("12345")
+
+    time.sleep(2)
     # 52 | click | css=.form-control-submit | 
     self.driver.find_element(By.CSS_SELECTOR, ".form-control-submit").click()
     # 53 | click | css=a:nth-child(1) > .hidden-sm-down | 
@@ -104,18 +111,24 @@ class TestTest():
     self.driver.find_element(By.NAME, "postcode").send_keys("12-345")
     # 58 | type | name=city | miasto
     self.driver.find_element(By.NAME, "city").send_keys("miasto")
+
+    time.sleep(2)
     # 59 | click | name=confirm-addresses | 
     self.driver.find_element(By.NAME, "confirm-addresses").click()
     # 60 | click | css=.row:nth-child(4) | 
     self.driver.find_element(By.CSS_SELECTOR, ".row:nth-child(4)").click()
     # 61 | click | id=delivery_option_2 |
     self.driver.find_element(By.ID, "delivery_option_4")
+
+    time.sleep(2)
     # 62 | click | name=confirmDeliveryOption | 
     self.driver.find_element(By.NAME, "confirmDeliveryOption").click()
     # 63 | click | id=payment-option-2 |
     self.driver.find_element(By.ID, "payment-option-2").click()
     # 64 | click | id=conditions_to_approve[terms-and-conditions] | 
     self.driver.find_element(By.ID, "conditions_to_approve[terms-and-conditions]").click()
+
+    time.sleep(2)
     # 65 | click | css=.ps-shown-by-js > .btn | 
     self.driver.find_element(By.CSS_SELECTOR, ".ps-shown-by-js > .btn").click()
     # 66 | click | css=.account > .hidden-sm-down | 
@@ -124,4 +137,6 @@ class TestTest():
     self.driver.find_element(By.CSS_SELECTOR, "#history-link .material-icons").click()
     # 68 | click | linkText=Szczegóły | 
     self.driver.find_element(By.LINK_TEXT, "Szczegóły").click()
+
+    time.sleep(3)
 
